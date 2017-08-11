@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-4 col-md-offset-4">
         <div class="form-group">
-          <label class="control-label">Input Your Name</label>
+          <label class="control-label" v-model="">Input Your Name</label>
           <div class="input-group">
             <input type="text" class="form-control">
             <span class="input-group-btn">
