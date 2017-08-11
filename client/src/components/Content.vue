@@ -12,7 +12,7 @@
           <div class="thumbnail">
             <img :src="display " alt="">
             <div class="caption">
-              <h3>player Name</h3>
+              <!-- <h3>Player Name: {{anArray[1].name}}</h3> -->
               <p>
                 <button class="btn btn-danger tombol" type="button" name="button" @click="clickRock">Rock</button> 
                 <button class="btn btn-info tombol" type="button" name="button" @click="clickPaper">Paper</button> 
@@ -30,7 +30,7 @@
           <div class="thumbnail">
             <img :src="display " alt="">
             <div class="caption">
-              <h3>player Name</h3>
+              <!-- <h3>Player Name: {{anArray[0].name}}</h3> -->
               <p>
                 <button class="btn btn-danger tombol" type="button" name="button" @click="clickRock">Rock</button> 
                 <button class="btn btn-info tombol" type="button" name="button" @click="clickPaper">Paper</button> 
@@ -54,6 +54,11 @@ export default {
       scissors: 'https://static01.nyt.com/images/2011/08/21/magazine/21mag-abstractimages-slide-IRQ1/21mag-abstractimages-slide-IRQ1-jumbo.jpg',
       paper: 'https://static01.nyt.com/images/2011/08/21/magazine/21mag-abstractimages-slide-2T4N/21mag-abstractimages-slide-2T4N-jumbo.jpg',
       display: 'https://media.tenor.com/images/d6cd5151c04765d1992edfde14483068/tenor.gif'
+    }
+  },
+  firebase: function () {
+    return {
+      anArray: this.$firebaseDB.ref('player_data/')
     }
   },
   methods: {
